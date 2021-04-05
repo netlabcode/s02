@@ -89,7 +89,7 @@ def serverThree():
 
 			strval1 = str(data1.decode("utf-8"))
 
-			a,b,c,d,e,f,g = strval1.split("+")
+			a,b,c,d,e,f,g,h,i = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -98,10 +98,12 @@ def serverThree():
         		d,
         		e,
         		f,
-        		g
+        		g,
+				h,
+				i
     		)
 
-			cursor.execute(" INSERT INTO s02m3(dtime, cb_ctrl, cb_res, i_res, p_res, q_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s)", inserted_values)
+			cursor.execute(" INSERT INTO s02m3(dtime, cb_ctrl, cb_res, i_res, p_res, q_res, v_res, tr_lv_q_res, tr_lv_p_res ) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
 
 			print("3")
 
@@ -116,7 +118,7 @@ def serverFour():
 
 			strval1 = str(data1.decode("utf-8"))
 
-			a,b,c,d,e,f,g,h,i,j = strval1.split("+")
+			a,b,c,d,e,f,g,h,i,j,k,l = strval1.split("+")
 
 			inserted_values = (
         		a,
@@ -128,10 +130,12 @@ def serverFour():
         		g,
         		h,
         		i,
-        		j
+        		j,
+				k,
+				l
     		)
 
-			cursor.execute(" INSERT INTO s02m4(dtime, cb_ctrl, cb_res, f_res, tap, tap_ctrl, ld_res, tap_mode, tap_res, v_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
+			cursor.execute(" INSERT INTO s02m4(dtime, cb_ctrl, cb_res, f_res, tap, tap_ctrl, ld_res, tap_mode, tap_res, v_res, tr_hv_p_res, tr_hv_q_res) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", inserted_values)
 
 			print("4")
 

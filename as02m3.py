@@ -26,6 +26,8 @@ val3 = client.get_node("ns=2;i=69")
 val4 = client.get_node("ns=2;i=70")
 val5 = client.get_node("ns=2;i=71")
 val6 = client.get_node("ns=2;i=72")
+val7 = client.get_node("ns=2;i=837")
+val8 = client.get_node("ns=2;i=838")
 
 
 # Define a function for the thread
@@ -49,12 +51,14 @@ def serverOne():
 					value4 = val4.get_value()
 					value5 = val5.get_value()
 					value6 = val6.get_value()
+					value7 =  val7.get_value()
+					value8 =  val8.get_value()
 					dt = datetime.now()
 
 					#covert inetger to string
 					#stringd = str(value)
 
-					stringd = str(dt)+"+"+str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)
+					stringd = str(dt)+"+"+str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)+"+"+str(value7)+"+"+str(value8)
 
 					#convert string to bytes data
 					data1 = stringd.encode()
@@ -92,12 +96,14 @@ def serverOneCC():
 					value4 = val4.get_value()
 					value5 = val5.get_value()
 					value6 = val6.get_value()
+					value7 =  val7.get_value()
+					value8 =  val8.get_value()
 					dt = datetime.now()
 
 					#covert inetger to string
 					#stringd = str(value)
 
-					stringd = str(dt)+"+"+str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)
+					stringd = str(dt)+"+"+str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)+"+"+str(value7)+"+"+str(value8)
 
 
 					#convert string to bytes data
@@ -153,6 +159,12 @@ def serverTwo():
 					elif check == 72:
 						val6.set_value(value, ua.VariantType.Float)
 						print('Value 72 set to:',value)
+					elif check == 837:
+						val7.set_value(value, ua.VariantType.Float)
+						print('Value 837 set to:',value)
+					elif check == 838:
+						val8.set_value(value, ua.VariantType.Float)
+						print('Value 838 set to:',value)
 					else:
 							print(".")
 
@@ -198,6 +210,12 @@ def serverTwoCC():
 					elif check == 72:
 						val6.set_value(value, ua.VariantType.Float)
 						print('Value 72 set to:',value)
+					elif check == 837:
+						val7.set_value(value, ua.VariantType.Float)
+						print('Value 837 set to:',value)
+					elif check == 838:
+						val8.set_value(value, ua.VariantType.Float)
+						print('Value 838 set to:',value)
 					else:
 							print(".")
 

@@ -25,6 +25,7 @@ val2 = client.get_node("ns=2;i=42")
 val3 = client.get_node("ns=2;i=43")
 val4 = client.get_node("ns=2;i=44")
 val5 = client.get_node("ns=2;i=45")
+val6 = client.get_node("ns=2;i=831")
 
 
 # Define a function for the thread
@@ -47,12 +48,13 @@ def serverOne():
 					value3 = val3.get_value()
 					value4 = val4.get_value()
 					value5 = val5.get_value()
+					value6 = val6.get_value()
 					dt = datetime.now()
 
 					#covert inetger to string
 					#stringd = str(value)
 
-					stringd = str(dt)+"+"+str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)
+					stringd = str(dt)+"+"+str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)
 
 					#convert string to bytes data
 					data1 = stringd.encode()
@@ -89,12 +91,13 @@ def serverOneCC():
 					value3 = val3.get_value()
 					value4 = val4.get_value()
 					value5 = val5.get_value()
+					value6 = val6.get_value()
 					dt = datetime.now()
 
 					#covert inetger to string
 					#stringd = str(value)
 
-					stringd = str(dt)+"+"+str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)
+					stringd = str(dt)+"+"+str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)
 
 
 					#convert string to bytes data
