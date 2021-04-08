@@ -310,6 +310,20 @@ def emptyNet():
     info( net[ 's20m2' ].cmd( 'python3.6 as20m2.py &amp' ) )
     info( net[ 's20m3' ].cmd( 'python3.6 as20m3.py &amp' ) )
 
+    time.sleep(2)
+
+    info( net[ 's01gw' ].cmd( 'python3.6 as01gdb.py &amp' ) )
+    info( net[ 's02gw' ].cmd( 'python3.6 as02gdb.py &amp' ) )
+    info( net[ 's12gw' ].cmd( 'python3.6 as12gdb.py &amp' ) )
+    info( net[ 's20gw' ].cmd( 'python3.6 as20gdb.py &amp' ) )
+
+    time.sleep(2)
+
+    info( net[ 's01gw' ].cmd( 'python3.6 as01gcc.py &amp' ) )
+    info( net[ 's02gw' ].cmd( 'python3.6 as02gcc.py &amp' ) )
+    info( net[ 's12gw' ].cmd( 'python3.6 as12gcc.py &amp' ) )
+    info( net[ 's20gw' ].cmd( 'python3.6 as20gcc.py &amp' ) )
+
 
 
     CLI( net )

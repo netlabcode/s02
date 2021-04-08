@@ -128,7 +128,10 @@ def serverTwo():
 
 				try: 
 					a,b = data3.split("+")
-					value = int(b)
+					if '.' in b:
+						value = float(b)
+					else:
+						value = int(b)
 					check = int(a)
 					if check == 452:
 						val1.set_value(value, ua.VariantType.Int16)
@@ -173,8 +176,10 @@ def serverTwoCC():
 				try:
 					a,b = data3.split("+")
 
-
-					value = int(b)
+					if '.' in b:
+						value = float(b)
+					else:
+						value = int(b)
 					check = int(a)
 					if check == 452:
 						val1.set_value(value, ua.VariantType.Int16)
