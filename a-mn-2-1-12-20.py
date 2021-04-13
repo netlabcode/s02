@@ -288,6 +288,7 @@ def emptyNet():
     info(os.system('ip addr add 100.0.0.99/24 dev s999'))
     info(os.system('ip link set s999 up'))
 
+    """
     time.sleep(2)
 
     info( net[ 's01m1' ].cmd( 'python3.6 as01m1.py &amp' ) )
@@ -323,6 +324,8 @@ def emptyNet():
     info( net[ 's02gw' ].cmd( 'python3.6 as02gcc.py &amp' ) )
     info( net[ 's12gw' ].cmd( 'python3.6 as12gcc.py &amp' ) )
     info( net[ 's20gw' ].cmd( 'python3.6 as20gcc.py &amp' ) )
+
+    """
 
 
 
